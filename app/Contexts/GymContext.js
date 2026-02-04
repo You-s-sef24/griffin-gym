@@ -95,24 +95,40 @@ export default function GymProvider({ children }) {
         ],
         coaches: [
             {
+                id: 1,
                 name: "Karim Mohamed",
-                role: "Coach",
+                role: "Personal Trainer",
                 age: 24,
+                image: '/karim-profile.jpg',
+                exp: 5,
+                badge: "",
             },
             {
-                name: "Osama",
-                role: "Coach",
+                id: 2,
+                name: "Osama Yahia",
+                role: "Personal Trainer",
                 age: 25,
+                image: '',
+                exp: 4,
+                badge: "",
             },
             {
+                id: 3,
                 name: "Donia",
-                role: "Coach",
+                role: "Personal Trainer",
                 age: 30,
+                image: '',
+                exp: 3,
+                badge: "For Women"
             },
             {
+                id: 4,
                 name: "Marwa",
-                role: "Zumba Instructor",
+                role: "Zumba Fitness",
                 age: 24,
+                image: '',
+                exp: 2,
+                badge: "For Women"
             }
         ],
         workingHours: [
