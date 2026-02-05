@@ -4,14 +4,15 @@ import { useContext } from "react";
 import { GymContext } from "../Contexts/GymContext";
 import { LanguageContext } from "../Contexts/LanguageContext";
 import FacilityCard from "./FacilitiesCard";
-import ProgramCard from "./ProgramCard";
 import Therapy from "./Therapy";
+import useTranslate from "../hooks/useTranslate";
 
 export default function Facilities() {
   const { gym } = useContext(GymContext);
   const { lang } = useContext(LanguageContext);
+  const t = useTranslate();
 
-  const renderFacilities = gym.facilities.map((facility) => {
+  const renderFacilities = t("facilities.services").map((facility) => {
     return (
       <FacilityCard
         image={facility.image}
@@ -50,11 +51,9 @@ export default function Facilities() {
             <path d="M4 17v2"></path>
             <path d="M5 18H3"></path>
           </svg>
-          <h3 className="text-white text-4xl mb-2">Our Facilities</h3>
+          <h3 className="text-white text-4xl mb-2">{t("facilities.title")}</h3>
           <hr className="text-red-600 w-1/5 border-3" />
-          <p className="text-neutral-500">
-            Premium amenities for your comfort and recovery
-          </p>
+          <p className="text-neutral-500">{t("facilities.desc")} </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-15">
           {renderFacilities}

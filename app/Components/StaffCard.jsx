@@ -1,4 +1,8 @@
+import useTranslate from "../hooks/useTranslate";
+
 export default function StaffCard({ name, role, exp, badge, image, schedule }) {
+  const t = useTranslate();
+
   return (
     <div className="w-[280px] rounded-2xl overflow-hidden bg-zinc-900 text-white shadow-lg border border-neutral-800 hover:scale-105 transition-all hover:border-red-600">
       {/* Image */}
@@ -46,13 +50,15 @@ export default function StaffCard({ name, role, exp, badge, image, schedule }) {
                 <circle cx="12" cy="8" r="6"></circle>
               </svg>
             </span>
-            <span>{exp} years experience</span>
+            <span>
+              {exp} {t("staff.exp")}
+            </span>
           </div>
         )}
 
         {schedule && (
           <div className="mt-4 border-t border-gray-700 pt-3 text-xs text-gray-400">
-            Schedules vary – Contact for details
+            {t("staff.schedule")}
           </div>
         )}
       </div>

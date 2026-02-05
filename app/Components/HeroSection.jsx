@@ -3,10 +3,12 @@
 import { useContext } from "react";
 import { GymContext } from "../Contexts/GymContext";
 import { LanguageContext } from "../Contexts/LanguageContext";
+import useTranslate from "../hooks/useTranslate";
 
 export default function HeroSection() {
   const { gym } = useContext(GymContext);
   const { lang } = useContext(LanguageContext);
+  const t = useTranslate();
 
   return (
     <div
@@ -16,9 +18,9 @@ export default function HeroSection() {
       dir={lang === "EN" ? "ltr" : "rtl"}
     >
       <div className="flex flex-col items-center w-1/2 gap-2">
-        <img src={gym.logo} className="w-3/4" loading="lazy" alt="logo"/>
+        <img src={gym.logo} className="w-3/4" loading="lazy" alt="logo" />
         <p className="text-white text-center font-bold text-4xl">
-          {gym.slogan}
+          {t("general.slogan")}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
@@ -42,7 +44,7 @@ export default function HeroSection() {
               <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <p>Visit Us</p>
+            <p> {t("general.visitUs")}</p>
           </a>
 
           <a
@@ -64,7 +66,7 @@ export default function HeroSection() {
             >
               <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
             </svg>
-            <p>Contact Us</p>
+            <p> {t("general.contact")}</p>
           </a>
         </div>
       </div>

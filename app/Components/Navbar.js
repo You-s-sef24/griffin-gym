@@ -2,11 +2,13 @@
 import { useContext, useState } from 'react';
 import { LanguageContext } from '../Contexts/LanguageContext';
 import { GymContext } from '../Contexts/GymContext';
+import useTranslate from '../hooks/useTranslate';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { lang, setLang } = useContext(LanguageContext);
     const { gym } = useContext(GymContext);
+    const t = useTranslate();
 
     return (
         <nav className="sticky top-0 flex lg:justify-around justify-between items-center bg-black font-bold text-white p-3 z-50" dir={lang === "EN" ? "ltr" : "rtl"}>
@@ -14,13 +16,13 @@ export default function Navbar() {
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-4">
-                <a href="#home">Home</a>
-                <a href="#memberships">Memberships</a>
-                <a href="#facilities">Facilities</a>
-                <a href="#staff">Satff</a>
-                <a href="#hours">Hours</a>
-                <a href="#rules">Rules</a>
-                <a href="#contact">Contact</a>
+                <a href="#home">{t("navbar.home")}</a>
+                <a href="#memberships">{t("navbar.memberships")}</a>
+                <a href="#facilities">{t("navbar.facilities")}</a>
+                <a href="#staff">{t("navbar.staff")}</a>
+                <a href="#hours">{t("navbar.hours")}</a>
+                <a href="#rules">{t("navbar.rules")}</a>
+                <a href="#contact">{t("navbar.contact")}</a>
             </div>
 
             {/* Mobile Hamburger & Language */}
@@ -57,44 +59,65 @@ export default function Navbar() {
                     <a
                         href="#home"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Home
+                        {t("navbar.home")}
                     </a>
                     <a
                         href="#memberships"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Memberships
+                        {t("navbar.memberships")}
                     </a>
                     <a
                         href="#facilities"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Facilities
+                        {t("navbar.facilities")}
                     </a>
                     <a
                         href="#staff"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Staff
+                        {t("navbar.staff")}
                     </a>
                     <a
                         href="#hours"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Hours
+                        {t("navbar.hours")}
                     </a>
                     <a
                         href="#rules"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Rules
+                        {t("navbar.rules")}
                     </a>
                     <a
                         href="#contact"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
-                        Contact
+                        {t("navbar.contact")}
                     </a>
                 </div>
             )}

@@ -1,4 +1,8 @@
+import useTranslate from "../hooks/useTranslate";
+
 export default function Notes() {
+  const t = useTranslate();
+
   return (
     <div className="mt-12 bg-[#222] border border-[#E10600]/30 rounded-lg p-6 max-w-3xl mx-auto w-3/5">
       <div className="flex items-start gap-4">
@@ -18,12 +22,9 @@ export default function Notes() {
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
         <div>
-          <h4 className="text-white text-lg mb-2">Important Notes</h4>
+          <h4 className="text-white text-lg mb-2">{t("memberships.notesTitle")}</h4>
           <ul className="text-gray-300 text-sm space-y-2">
-            <li>• Guest invitations must be different people each time</li>
-            <li>• Freeze periods can be activated when needed</li>
-            <li>• Private sessions subject to coach availability</li>
-            <li>• Membership upgrades allowed within 1 week of purchase</li>
+            {t("memberships.notesDesc")}
           </ul>
         </div>
       </div>

@@ -2,12 +2,14 @@
 
 import { useContext } from "react";
 import { GymContext } from "../Contexts/GymContext";
+import useTranslate from "../hooks/useTranslate";
 
 export default function ProgramCard({ image, title, discount, desc }) {
   const { gym } = useContext(GymContext);
+  const t = useTranslate();
 
   return (
-    <div className="relative w-full max-w-sm rounded-2xl bg-[#111] text-white overflow-hidden border border-neutral-800 hover:border-red-600 hover:scale-105 transition-all">
+    <div className="relative max-w-sm rounded-2xl bg-[#111] text-white overflow-hidden border border-neutral-800 hover:border-red-600 hover:scale-105 transition-all w-full">
       {/* Image */}
       <div
         className="h-48 bg-cover bg-center relative"
@@ -37,14 +39,14 @@ export default function ProgramCard({ image, title, discount, desc }) {
             target="_blank"
             className="text-center bg-red-600 hover:bg-red-700 transition-all rounded-xl py-2 font-semibold"
           >
-            Contact Us for Details
+            {t("general.contact")}
           </a>
 
           <a
             href="#contact"
             className="border border-gray-600 hover:border-white transition-all text-center rounded-xl py-2 text-sm"
           >
-            Visit Gym
+            {t("contact.visitUs")}
           </a>
         </div>
       </div>

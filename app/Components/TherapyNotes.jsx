@@ -1,4 +1,8 @@
+import useTranslate from "../hooks/useTranslate";
+
 export default function TherapyNotes() {
+  const t = useTranslate();
+
   return (
     <div className="mt-12 bg-[#222] border border-[#E10600]/30 w-3/4 lg:w-1/2 rounded-lg p-6 max-w-3xl mx-auto">
       <div className="flex items-start gap-4">
@@ -21,13 +25,9 @@ export default function TherapyNotes() {
           <circle cx="20" cy="10" r="2"></circle>
         </svg>
         <div>
-          <h4 className="text-white text-lg mb-2">
-            Certified Professional Care
-          </h4>
+          <h4 className="text-white text-lg mb-2">{t("therapy.notesTitle")}</h4>
           <p className="text-gray-300 text-sm leading-relaxed">
-            All our recovery services are provided by certified professionals
-            with years of experience. Book your session today and experience the
-            difference professional care can make in your recovery journey.
+            {t("therapy.notesDesc")}
           </p>
         </div>
       </div>

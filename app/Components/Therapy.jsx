@@ -4,11 +4,13 @@ import { useContext } from "react";
 import ProgramCard from "./ProgramCard";
 import { GymContext } from "../Contexts/GymContext";
 import TherapyNotes from "./TherapyNotes";
+import useTranslate from "../hooks/useTranslate";
 
 export default function Therapy() {
   const { gym } = useContext(GymContext);
+  const t = useTranslate();
 
-  const renderTherapies = gym.therapies.map((therapy) => {
+  const renderTherapies = t("therapy.therapies").map((therapy) => {
     return (
       <ProgramCard
         image={therapy.image}
@@ -40,12 +42,9 @@ export default function Therapy() {
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
         </svg>
         <h3 className="text-white text-center text-4xl mb-2">
-          Recovery & Physical Therapy
+          {t("therapy.title")}
         </h3>
-        <p className="text-neutral-500 text-center">
-          Dedicated professionals committed to making your gym experience
-          exceptional
-        </p>
+        <p className="text-neutral-500 text-center">{t("therapy.desc")}</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-15">
