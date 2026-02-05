@@ -1,3 +1,4 @@
+import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import GymProvider from './Contexts/GymContext';
 import LanguageProvider from './Contexts/LanguageContext';
@@ -12,12 +13,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='bg-black'>
-        <LanguageProvider>
-          <GymProvider>
+        <GymProvider>
+          <LanguageProvider>
             <Navbar />
             {children}
-          </GymProvider>
-        </LanguageProvider>
+            <Footer />
+          </LanguageProvider>
+        </GymProvider>
       </body>
     </html >
   );

@@ -9,15 +9,15 @@ export default function Navbar() {
     const { gym } = useContext(GymContext);
 
     return (
-        <nav className="sticky top-0 flex lg:justify-around sm:justify-between items-center bg-black font-bold text-white p-3 z-50" dir={lang === "EN" ? "ltr" : "rtl"}>
-            <img src={gym.logo} className="w-24" alt="Griffin Gym" />
+        <nav className="sticky top-0 flex lg:justify-around justify-between items-center bg-black font-bold text-white p-3 z-50" dir={lang === "EN" ? "ltr" : "rtl"}>
+            <img src={gym.logo} loading='lazy' className="w-24" alt="Griffin Gym" />
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-4">
                 <a href="#home">Home</a>
                 <a href="#memberships">Memberships</a>
                 <a href="#facilities">Facilities</a>
-                <a href="#coaches">Coaches</a>
+                <a href="#staff">Satff</a>
                 <a href="#hours">Hours</a>
                 <a href="#rules">Rules</a>
                 <a href="#contact">Contact</a>
@@ -73,10 +73,10 @@ export default function Navbar() {
                         Facilities
                     </a>
                     <a
-                        href="#coaches"
+                        href="#staff"
                         className="block px-6 py-4 text-white dark:text-white hover:bg-red-950 hover:text-red-600"
                     >
-                        Coaches
+                        Staff
                     </a>
                     <a
                         href="#hours"

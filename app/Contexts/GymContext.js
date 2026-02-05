@@ -24,21 +24,21 @@ export default function GymProvider({ children }) {
                 title: "3 Months Membership",
                 discount: "~13% OFF",
                 image: "/griffin-gym-3.jpg",
-                services: ["2 weeks freeze period", "3 guest invitations"]
+                services: ["2 weeks freeze period", "3 guest invitations", "1 free physical therapy session"]
             },
             {
                 id: 3,
                 title: "6 Months Membership",
                 discount: "~33% OFF",
                 image: "/griffin-gym-5.jpg",
-                services: ["1 month freeze period", "6 guest invitations", "2 free private sessions"]
+                services: ["1 month freeze period", "6 guest invitations", "2 free private sessions", "1 free physical therapy session"]
             },
             {
                 id: 4,
                 title: "1 Year Membership",
                 discount: "~45% OFF",
                 image: "/griffin-gym-4.jpg",
-                services: ["2 months freeze period", "12 guest invitations", "4 free private sessions"]
+                services: ["2 months freeze period", "12 guest invitations", "4 free private sessions", "1 free physical therapy session"]
             }
         ],
         privatePrograms: [
@@ -69,6 +69,39 @@ export default function GymProvider({ children }) {
                 discount: "~30% OFF"
             }
         ],
+        therapies: [
+            {
+                id: 2,
+                title: "6 Physical Therapy Sessions",
+                image: '/pt3.jpg',
+                discount: "~16% OFF"
+            },
+            {
+                id: 3,
+                title: "12 Physical Therapy Sessions",
+                image: '/pt2.jpg',
+                discount: "~25% OFF"
+            },
+            {
+                id: 5,
+                title: "6 Cupping Session",
+                image: "/cupping.jpg",
+                discount: "~16 OFF"
+            },
+            {
+                id: 6,
+                title: "12 Cupping Session",
+                image: "/cupping2.jpg",
+                discount: "~25 OFF"
+            },
+            {
+                id: 7,
+                title: "Recovery Sessions",
+                image: "/recovery.jpg",
+                discount: ""
+            },
+
+        ],
         facilities: [
             {
                 id: 1,
@@ -93,43 +126,107 @@ export default function GymProvider({ children }) {
                 image: '/griffin-gym-6.jpg'
             },
         ],
-        coaches: [
+        managmentTeam: [
             {
                 id: 1,
-                name: "Karim Mohamed",
-                role: "Personal Trainer",
-                age: 24,
-                image: '/karim-profile.jpg',
-                exp: 5,
-                badge: "",
+                name: "Mahmoud Abo Amira",
+                role: "Owner & Founder",
+                image: '',
+                badge: "Founder"
             },
             {
                 id: 2,
-                name: "Osama Yahia",
-                role: "Personal Trainer",
-                age: 25,
+                name: "Omar Abdelnaby",
+                role: "Receptionist",
                 image: '',
-                exp: 4,
-                badge: "",
+                badge: ""
             },
             {
                 id: 3,
-                name: "Donia",
-                role: "Personal Trainer",
-                age: 30,
-                image: '',
-                exp: 3,
-                badge: "For Women"
+                name: "Youssef Mahmoud",
+                role: "Receptionist",
+                image: '/me.jpeg',
+                badge: ""
             },
             {
                 id: 4,
+                name: "Eman Reda",
+                role: "Receptionist",
+                image: '',
+                badge: ""
+            },
+            {
+                id: 6,
+                name: "Yasser Ramadan",
+                role: "House Keeper",
+                image: '/yasser.jpeg',
+                exp: "",
+                badge: ""
+            },
+            {
+                id: 7,
+                name: "Nora",
+                role: "House Keeper",
+                image: '',
+                exp: "",
+                badge: ""
+            },
+            {
+                id: 5,
+                name: "Dr. Taha Gamal",
+                role: "Doctor of Physical Therapy",
+                image: '/taha.jpeg',
+                exp: "4",
+                badge: "",
+                schedule: true
+            },
+        ],
+        coaches: [
+            {
+                id: 7,
+                name: "Karim Mohamed",
+                role: "Head Coach",
+                image: '/karim-profile.jpg',
+                exp: 6,
+                badge: "",
+                schedule: true
+            },
+            {
+                id: 8,
+                name: "Osama Yahia",
+                role: "Coach",
+                image: '/osama.jpeg',
+                exp: 2,
+                badge: "",
+                schedule: true
+            },
+            {
+                id: 9,
+                name: "Donia",
+                role: "Head Coach",
+                image: '',
+                exp: 3,
+                badge: "For Women",
+                schedule: true
+            },
+            {
+                id: 10,
                 name: "Marwa",
-                role: "Zumba Fitness",
-                age: 24,
+                role: "Zumba Instructor",
                 image: '',
                 exp: 2,
-                badge: "For Women"
-            }
+                badge: "For Women",
+                schedule: true
+            },
+            {
+                id: 11,
+                name: "Roaa",
+                role: "Western Dance Instructor",
+                image: '',
+                exp: 2,
+                badge: "For Women",
+                schedule: true
+            },
         ],
         workingHours: [
             {
@@ -150,7 +247,7 @@ export default function GymProvider({ children }) {
             "Members must preserve cleanliness of showers and bathrooms",
             "Membership upgrades allowed within 1 week of purchase"
         ],
-        phone: "011111",
+        phone: "+201102062109",
         facebook: ""
     });
 

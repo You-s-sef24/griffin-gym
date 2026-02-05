@@ -10,28 +10,26 @@ export default function HeroSection() {
 
   return (
     <div
-      id="#home"
+      id="home"
       className="h-160 bg-center bg-cover bg-no-repeat flex items-center justify-center"
       style={{ backgroundImage: `url('${gym.heroImage}')` }}
       dir={lang === "EN" ? "ltr" : "rtl"}
     >
       <div className="flex flex-col items-center w-1/2 gap-2">
-        <img src={gym.logo} className="w-3/4" />
-        <p className="text-white font-bold text-4xl">{gym.slogan}</p>
-        <div className="flex font-bold">
-          <p className="text-neutral-300 text-xl">Owned By:</p>
-          <p className="text-white text-2xl">{gym.owner}</p>
-        </div>
+        <img src={gym.logo} className="w-3/4" loading="lazy" alt="logo"/>
+        <p className="text-white text-center font-bold text-4xl">
+          {gym.slogan}
+        </p>
 
-        <div className="flex items-center gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
           <a
             href="#contact"
             className="flex justify-center items-center gap-1 text-xl text-white bg-red-600 rounded-xl cursor-pointer hover:bg-red-700 hover:scale-105 transition-all p-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -44,17 +42,17 @@ export default function HeroSection() {
               <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            Visit Us
+            <p>Visit Us</p>
           </a>
 
           <a
-            href=""
+            href={`https://wa.me/${gym.phone}`}
             className="flex justify-center items-center gap-1 text-xl text-red-600 bg-white rounded-xl cursor-pointer hover:bg-gray-200 hover:scale-105 transition-all p-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -66,7 +64,7 @@ export default function HeroSection() {
             >
               <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
             </svg>
-            Contact on WhatsApp
+            <p>Contact Us</p>
           </a>
         </div>
       </div>
