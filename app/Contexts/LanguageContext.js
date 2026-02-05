@@ -57,13 +57,13 @@ export default function LanguageProvider({ children }) {
                 managmentTeam: gym.managmentTeam,
                 coachesTitle: "Training Team",
                 coaches: gym.coaches,
-                exp: "years experience"
+                exp: "years experience",
+                schedule: "Schedules vary – Contact for details"
             },
             facilities: {
                 title: "Our Facilities",
                 desc: "Premium amenities for your comfort and recovery",
                 services: gym.facilities,
-                schedule: "Schedules vary – Contact for details"
             },
             therapy: {
                 title: "Recovery & Physical Therapy",

@@ -16,13 +16,13 @@ export default function Navbar() {
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-4">
-                <a href="#home">{t("navbar.home")}</a>
-                <a href="#memberships">{t("navbar.memberships")}</a>
-                <a href="#facilities">{t("navbar.facilities")}</a>
-                <a href="#staff">{t("navbar.staff")}</a>
-                <a href="#hours">{t("navbar.hours")}</a>
-                <a href="#rules">{t("navbar.rules")}</a>
-                <a href="#contact">{t("navbar.contact")}</a>
+                <a href="#home" className='hover:text-red-600 transition-all'>{t("navbar.home")}</a>
+                <a href="#memberships" className='hover:text-red-600 transition-all'>{t("navbar.memberships")}</a>
+                <a href="#facilities" className='hover:text-red-600 transition-all'>{t("navbar.facilities")}</a>
+                <a href="#staff" className='hover:text-red-600 transition-all'>{t("navbar.staff")}</a>
+                <a href="#hours" className='hover:text-red-600 transition-all'>{t("navbar.hours")}</a>
+                <a href="#rules" className='hover:text-red-600 transition-all'>{t("navbar.rules")}</a>
+                <a href="#contact" className='hover:text-red-600 transition-all'>{t("navbar.contact")}</a>
             </div>
 
             {/* Mobile Hamburger & Language */}
