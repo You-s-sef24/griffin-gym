@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import { LanguageContext } from '../Contexts/LanguageContext';
 import { GymContext } from '../Contexts/GymContext';
 import useTranslate from '../hooks/useTranslate';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,13 @@ export default function Navbar() {
 
     return (
         <nav className="sticky top-0 flex lg:justify-around justify-between items-center bg-black font-bold text-white p-3 z-50" dir={lang === "EN" ? "ltr" : "rtl"}>
-            <img src={gym.logo} loading='lazy' className="w-24" alt="Griffin Gym" />
+            <Image
+                src={gym.logo}
+                width={96}
+                height={96}
+                className="w-24 h-auto"
+                alt="Griffin Gym"
+            />
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-4">

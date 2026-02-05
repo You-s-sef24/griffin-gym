@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { GymContext } from "../Contexts/GymContext";
 import { LanguageContext } from "../Contexts/LanguageContext";
 import useTranslate from "../hooks/useTranslate";
+import Image from "next/image";
 
 export default function Footer() {
   const { gym } = useContext(GymContext);
@@ -19,7 +20,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img className="w-26" src={gym.logo} alt="Griffin Gym Logo" />
+            <Image
+              src={gym.logo}
+              alt="Griffin Gym Logo"
+              width={104}
+              height={104}
+              className="w-24 h-auto"
+            />
           </div>
 
           {/* Copyright */}

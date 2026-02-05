@@ -36,9 +36,7 @@ export default function Contact() {
           </svg>
           <h3 className="text-white text-4xl mb-2">{t("contact.title")}</h3>
           <hr className="text-red-600 w-1/5 border-3" />
-          <p className="text-neutral-500 text-center">
-            {t("contact.desc")}
-          </p>
+          <p className="text-neutral-500 text-center">{t("contact.desc")}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-3/4 mt-15">
@@ -127,6 +125,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-[#E10600] hover:bg-[#C00500] text-white px-8 py-4 rounded-lg transition-all duration-300 text-center shadow-xl hover:shadow-2xl hover:scale-105 mt-8"
+              dir={lang === "EN" ? "ltr" : "rtl"}
             >
               <div className="flex items-center justify-center gap-2">
                 <svg

@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { GymContext } from "../Contexts/GymContext";
 import { LanguageContext } from "../Contexts/LanguageContext";
 import useTranslate from "../hooks/useTranslate";
+import Image from "next/image";
 
 export default function HeroSection() {
   const { gym } = useContext(GymContext);
@@ -18,7 +19,13 @@ export default function HeroSection() {
       dir={lang === "EN" ? "ltr" : "rtl"}
     >
       <div className="flex flex-col items-center w-1/2 gap-2">
-        <img src={gym.logo} className="w-3/4" loading="lazy" alt="logo" />
+        <Image
+          src={gym.logo}
+          width={300}
+          height={300}
+          className="w-3/4 h-auto"
+          alt="logo"
+        />
         <p className="text-white text-center font-bold text-4xl">
           {t("general.slogan")}
         </p>

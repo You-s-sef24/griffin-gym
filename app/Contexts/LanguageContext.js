@@ -106,7 +106,7 @@ export default function LanguageProvider({ children }) {
             },
 
             general: {
-                name: "Griffin Gym",
+                name: "جريفين جيم",
                 slogan: "حوّل جسمك وارتقِ بحياتك",
                 visitUs: "زورنا",
                 contact: "تواصل معنا",

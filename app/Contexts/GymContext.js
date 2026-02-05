@@ -298,7 +298,7 @@ export default function GymProvider({ children }) {
         managmentTeamAR: [
             {
                 id: 1,
-                name: "محمود أبو أميرة",
+                name: "محمود أبو عميرة",
                 role: "المالك والمؤسس",
                 image: '',
                 badge: "مؤسس"
@@ -419,7 +419,7 @@ export default function GymProvider({ children }) {
             {
                 id: 9,
                 name: "دنيا",
-                role: "مدربة رئيسي",
+                role: "مدربة رئيسية",
                 image: '',
                 exp: 3,
                 badge: "للسيدات",
@@ -482,7 +482,7 @@ export default function GymProvider({ children }) {
             "يجب على الأعضاء الحفاظ على نظافة غرف الاستحمام والحمامات",
             "يُسمح بترقية الاشتراك خلال أسبوع ١ من تاريخ الشراء"
         ],
-        phone: "+201102062109",
+        phone: "01102062109",
     });
 
     return (

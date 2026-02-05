@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useTranslate from "../hooks/useTranslate";
 
 export default function StaffCard({ name, role, exp, badge, image, schedule }) {
@@ -7,11 +8,12 @@ export default function StaffCard({ name, role, exp, badge, image, schedule }) {
     <div className="w-[280px] rounded-2xl overflow-hidden bg-zinc-900 text-white shadow-lg border border-neutral-800 hover:scale-105 transition-all hover:border-red-600">
       {/* Image */}
       <div className="relative h-[360px]">
-        <img
-          src={image || "/avatar.jpg"} // change image path
-          loading="lazy"
+        <Image
+          src={image || "/avatar.jpg"}
           alt="Coach"
-          className="h-full w-full object-cover brightness-75"
+          fill
+          loading="lazy"
+          className="object-cover brightness-75"
         />
 
         {/* Gradient overlay */}

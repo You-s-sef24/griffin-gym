@@ -3,9 +3,9 @@
 import { useContext } from "react";
 import { GymContext } from "../Contexts/GymContext";
 import { LanguageContext } from "../Contexts/LanguageContext";
-import FacilityCard from "./FacilitiesCard";
 import Therapy from "./Therapy";
 import useTranslate from "../hooks/useTranslate";
+import FacilityCard from "./FaciilityCard";
 
 export default function Facilities() {
   const { gym } = useContext(GymContext);

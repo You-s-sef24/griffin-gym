@@ -82,7 +82,7 @@ export default function MembershipOffers() {
           <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
           <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
         </svg>
-        <h3 className="text-white text-4xl mb-2">{t("private.title")}</h3>
+        <h3 className="text-white text-center text-4xl mb-2">{t("private.title")}</h3>
         <hr className="text-red-600 w-1/5 border-3 mb-6" />
         <p className="text-neutral-500">{t("private.desc")} </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-15">
