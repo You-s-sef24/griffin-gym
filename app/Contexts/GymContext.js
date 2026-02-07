@@ -13,6 +13,13 @@ export default function GymProvider({ children }) {
         heroImage: '/griffin-gym-4.jpg',
         membershipPlans: [
             {
+                id: 0,
+                title: "12 Session Membership",
+                discount: "",
+                image: "/griffin-gym.jpg",
+                services: []
+            },
+            {
                 id: 1,
                 title: "1 Month Membership",
                 discount: "",
@@ -42,6 +49,13 @@ export default function GymProvider({ children }) {
             }
         ],
         membershipPlansAR: [
+            {
+                id: 0,
+                title: "اشتراك لمدة 12 حصة",
+                discount: "",
+                image: "/griffin-gym-6.jpg",
+                services: []
+            },
             {
                 id: 1,
                 title: "اشتراك لمدة شهر",
@@ -482,7 +496,7 @@ export default function GymProvider({ children }) {
             "يجب على الأعضاء الحفاظ على نظافة غرف الاستحمام والحمامات",
             "يُسمح بترقية الاشتراك خلال أسبوع ١ من تاريخ الشراء"
         ],
-        phone: "01102062109",
+        phone: "+201102062109",
     });
 
     return (

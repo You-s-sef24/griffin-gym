@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import GymProvider from './Contexts/GymContext';
 import LanguageProvider from './Contexts/LanguageContext';
 import './globals.css';
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: 'Griffin Gym',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <LanguageProvider>
             <Navbar />
             {children}
+            <Analytics />
             <Footer />
           </LanguageProvider>
         </GymProvider>
